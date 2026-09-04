@@ -158,19 +158,6 @@ Depending on the configured Electron Builder targets, the output may include an 
 | **localStorage**       | Local note persistence             |
 | **Electron Builder**   | Application packaging              |
 
-### Why Vanilla JavaScript?
-
-EzNote intentionally avoids large frontend frameworks and unnecessary dependencies.
-
-The project is built with standard web technologies to keep the codebase straightforward and easy to understand.
-
-This makes EzNote:
-
-* Simple to modify
-* Easy to maintain
-* Easy to learn from
-* Free from unnecessary frontend dependencies
-
 ---
 
 ## Project Structure
@@ -187,42 +174,9 @@ EzNote/
     └── ...
 ```
 
-The structure may evolve as EzNote continues to develop.
 
 ---
 
-## Privacy
-
-EzNote follows a local-first approach.
-
-* Notes are stored locally on your device
-* No account is required
-* No cloud database is required
-* Notes are not intentionally uploaded to a remote server
-
-Your notes stay on your device unless you choose to move or export them yourself.
-
----
-
-## Roadmap
-
-EzNote is currently at **v1.0.0**.
-
-Potential future improvements include:
-
-* [ ] Better note organization
-* [ ] Folders
-* [ ] Tags
-* [ ] Improved search
-* [ ] Markdown support
-* [ ] Import and export
-* [ ] Note backup and restore
-* [ ] Improved customization
-* [ ] Additional keyboard shortcuts
-
-The roadmap may change as the project evolves.
-
----
 
 ## Contributing
 
@@ -241,17 +195,3 @@ EzNote is released under the **MIT License**.
 See the [`LICENSE`](LICENSE) file for the full license text.
 
 ---
-
-## Support
-
-If you find EzNote useful, consider giving the repository a star on GitHub.
-
-It helps the project gain visibility and motivates further development.
-
-<div align="center">
-
-**EzNote — Simple notes, without the unnecessary complexity.**
-
-[GitHub Repository](https://github.com/brechq/EzNote)
-
-</div>
