@@ -1,92 +1,194 @@
-# EzNote (v1.0.0) 📝
+# EzNote
 
-**EzNote** adalah aplikasi pencatat desktop yang dirancang dengan konsep minimalis, cepat, dan bebas distraksi. Dibangun menggunakan Electron murni, HTML5, CSS modern, dan vanilla JavaScript tanpa ketergantungan library/framework yang berat.
+> **A simple, fast, and distraction-free desktop note-taking app.**
 
----
-
-## ✨ Fitur Utama
-
-- **Antarmuka Tiga Panel**: Navigasi sidebar, daftar catatan, dan area penulisan yang proporsional dan responsif.
-- **Autosave Real-time**: Catatan tersimpan secara otomatis langsung saat mengetik tanpa perlu repot menekan save manual.
-- **Penyimpanan Lokal Persisten**: Data tersimpan aman di disk lokal pengguna (`localStorage`), tetap ada saat aplikasi ditutup dan dibuka kembali.
-- **Manajemen Catatan Lengkap**:
-  - Buat catatan baru secara instan
-  - Tandai catatan penting (**Favorites**)
-  - Tempat sampah (**Trash**) dengan fitur *Restore* dan *Permanent Delete*
-- **Pencarian Cepat**: Filter judul dan isi catatan secara instan saat mengetik di kolom pencarian.
-- **Tema Gelap & Terang**: Dukungan dark mode dan light mode bawaan yang mengingat preferensi pengguna.
-- **Keyboard-Friendly**: Didukung pintasan tombol untuk navigasi dan penulisan yang cepat.
+**EzNote v1.0.0** is a lightweight desktop note-taking application built with Electron, modern HTML5, CSS, and vanilla JavaScript. It focuses on keeping note-taking fast, clean, local, and free from unnecessary complexity.
 
 ---
 
-## ⌨️ Pintasan Keyboard (Shortcuts)
+## ✨ Features
 
-| Shortcut | Fungsi |
-| :--- | :--- |
-| `Ctrl + N` / `Cmd + N` | Membuat catatan baru |
-| `Ctrl + F` / `Cmd + F` | Fokus ke kolom pencarian |
-| `Ctrl + B` / `Cmd + B` | Format teks tebal (*Bold*) |
-| `Ctrl + I` / `Cmd + I` | Format teks miring (*Italic*) |
-| `Escape` | Mengosongkan pencarian / membatalkan seleksi |
-| `Delete` / `Backspace` | Menghapus catatan aktif (saat tidak fokus mengetik) |
+### 📝 Note Management
 
----
+* Create notes instantly
+* Edit notes with real-time autosave
+* Mark notes as **Favorites**
+* Move notes to **Trash**
+* Restore deleted notes
+* Permanently delete notes
 
-## 🚀 Menjalankan dari Source Code
+### 🔎 Fast Search
 
-Pastikan sudah menginstal [Node.js](https://nodejs.org/) di perangkat kamu.
+Search through your notes instantly by:
 
-1. **Clone atau unduh repositori ini:**
-   ```bash
-   git clone [https://github.com/username/EzNote.git](https://github.com/username/EzNote.git)
-   cd EzNote
+* Note title
+* Note content
 
+### 💾 Local & Persistent Storage
+
+Your notes are stored locally on your device using `localStorage`.
+
+No account.
+No cloud dependency.
+No unnecessary data syncing.
+
+Your notes remain available after restarting the application.
+
+### 🎨 Light & Dark Mode
+
+Built-in **Light Mode** and **Dark Mode** with your preference automatically saved.
+
+### 🖥️ Three-Panel Interface
+
+EzNote uses a clean three-panel layout:
+
+```text
+┌──────────────┬──────────────────┬─────────────────────────┐
+│              │                  │                         │
+│   Sidebar    │    Note List     │      Note Editor        │
+│              │                  │                         │
+│  Navigation  │   Your Notes     │    Write & Edit         │
+│              │                  │                         │
+└──────────────┴──────────────────┴─────────────────────────┘
 ```
 
-2. **Instal dependensi:**
+The layout is designed to keep navigation, notes, and editing accessible without clutter.
+
+### ⌨️ Keyboard-Friendly
+
+Designed with keyboard shortcuts for faster navigation and editing.
+
+---
+
+## ⌨️ Keyboard Shortcuts
+
+| Shortcut               | Action                                                |
+| ---------------------- | ----------------------------------------------------- |
+| `Ctrl + N` / `Cmd + N` | Create a new note                                     |
+| `Ctrl + F` / `Cmd + F` | Focus the search field                                |
+| `Ctrl + B` / `Cmd + B` | Toggle **Bold**                                       |
+| `Ctrl + I` / `Cmd + I` | Toggle *Italic*                                       |
+| `Escape`               | Clear search / cancel selection                       |
+| `Delete` / `Backspace` | Delete the active note when the editor is not focused |
+
+> **Note:** macOS uses `Cmd`, while Windows and Linux use `Ctrl`.
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Make sure you have **Node.js** installed on your computer.
+
+[Download Node.js](https://nodejs.org/?utm_source=chatgpt.com)
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/username/EzNote.git
+cd EzNote
+```
+
+### 2. Install Dependencies
+
 ```bash
 npm install
-
 ```
 
+### 3. Start EzNote
 
-3. **Jalankan aplikasi (Development mode):**
 ```bash
 npm start
-
 ```
 
-
+EzNote should now launch in development mode.
 
 ---
 
-## 📦 Membangun File Installer (.exe)
+## 📦 Build for Windows
 
-Untuk mem-package aplikasi menjadi standalone executable Windows:
+To package EzNote into a standalone Windows application:
 
 ```bash
 npm run dist
-
 ```
 
-Hasil installer (`EzNote Setup 1.0.0.exe`) dan versi portable (`EzNote 1.0.0.exe`) akan otomatis tersimpan di dalam folder `dist/`.
+The generated files will be placed inside the `dist/` directory.
+
+Typical output:
+
+```text
+dist/
+├── EzNote Setup 1.0.0.exe
+└── EzNote 1.0.0.exe
+```
+
+The installer can be used to install EzNote normally, while the portable version can be launched without a traditional installation.
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **Runtime:** [Electron](https://www.electronjs.org/)
-* **Frontend:** HTML5, Semantic Elements
-* **Styling:** Modern CSS (CSS Variables, Flexbox, Custom Scrollbars)
-* **Logic:** Vanilla JavaScript (ES6+)
-* **Packaging:** Electron Builder
+| Technology             | Purpose                            |
+| ---------------------- | ---------------------------------- |
+| **Electron**           | Desktop application runtime        |
+| **HTML5**              | Application structure              |
+| **Modern CSS**         | UI, layout, themes, and styling    |
+| **Vanilla JavaScript** | Application logic and interactions |
+| **localStorage**       | Local note persistence             |
+| **Electron Builder**   | Application packaging              |
+
+### Why Vanilla JavaScript?
+
+EzNote intentionally avoids heavy frontend frameworks and unnecessary dependencies.
+
+The goal is to keep the application:
+
+* Lightweight
+* Fast
+* Easy to understand
+* Easy to modify
+* Easy to maintain
 
 ---
 
-## 📄 Lisensi
+## 📁 Project Structure
 
-Proyek ini dilisensikan di bawah lisensi [MIT](https://www.google.com/search?q=LICENSE).
-
+```text
+EzNote/
+├── index.html
+├── style.css
+├── script.js
+├── main.js
+├── package.json
+└── assets/
+    └── ...
 ```
 
-```
+> The exact structure may change as the project evolves.
+
+---
+
+## 🔐 Privacy
+
+EzNote is designed around local-first note storage.
+
+Your notes are stored locally on your device rather than being uploaded to a remote server.
+
+There is no required account or cloud database.
+
+---
+## 📄 License
+
+EzNote is released under the **MIT License**.
+
+See the [`LICENSE`](LICENSE) file for more information.
+
+---
+
+## ⭐ Support
+
+If you find EzNote useful, consider giving the repository a ⭐ on GitHub.
+
+Every star helps the project grow.
