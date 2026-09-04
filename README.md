@@ -1,46 +1,66 @@
+<div align="center">
+
+<img src="readmebanner.jpg" alt="EzNote Banner" width="100%">
+
 # EzNote
 
-> **A simple, fast, and distraction-free desktop note-taking app.**
+**A simple, fast, and distraction-free desktop note-taking app.**
 
-**EzNote v1.0.0** is a lightweight desktop note-taking application built with Electron, modern HTML5, CSS, and vanilla JavaScript. It focuses on keeping note-taking fast, clean, local, and free from unnecessary complexity.
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/brechq/EzNote/releases)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Electron](https://img.shields.io/badge/Electron-Desktop-47848F.svg)](https://www.electronjs.org/)
+
+</div>
 
 ---
 
-## ✨ Features
+## Overview
 
-### 📝 Note Management
+**EzNote** is a desktop note-taking application designed around simplicity, speed, and local-first storage.
+
+Instead of adding unnecessary complexity, EzNote focuses on the essentials: writing notes, organizing them, searching through them, and keeping everything available locally on your device.
+
+No account.
+No cloud dependency.
+No unnecessary setup.
+
+---
+
+## Features
+
+### Note Management
 
 * Create notes instantly
-* Edit notes with real-time autosave
-* Mark notes as **Favorites**
-* Move notes to **Trash**
+* Edit notes with automatic saving
+* Mark notes as favorites
+* Move notes to Trash
 * Restore deleted notes
 * Permanently delete notes
 
-### 🔎 Fast Search
+### Fast Search
 
-Search through your notes instantly by:
+Search through your notes by:
 
 * Note title
 * Note content
 
-### 💾 Local & Persistent Storage
+Search results update instantly while typing.
 
-Your notes are stored locally on your device using `localStorage`.
+### Local-First Storage
 
-No account.
-No cloud dependency.
-No unnecessary data syncing.
+EzNote stores your notes locally using `localStorage`.
 
-Your notes remain available after restarting the application.
+Your notes remain available after restarting the application without requiring an account or remote database.
 
-### 🎨 Light & Dark Mode
+### Light & Dark Mode
 
-Built-in **Light Mode** and **Dark Mode** with your preference automatically saved.
+Switch between Light Mode and Dark Mode.
 
-### 🖥️ Three-Panel Interface
+Your selected theme is automatically saved and restored the next time you launch EzNote.
 
-EzNote uses a clean three-panel layout:
+### Three-Panel Interface
+
+EzNote uses a three-panel workspace designed to keep navigation, notes, and editing within a single view.
 
 ```text
 ┌──────────────┬──────────────────┬─────────────────────────┐
@@ -52,15 +72,15 @@ EzNote uses a clean three-panel layout:
 └──────────────┴──────────────────┴─────────────────────────┘
 ```
 
-The layout is designed to keep navigation, notes, and editing accessible without clutter.
+The layout keeps the main parts of the application accessible without unnecessary interface clutter.
 
-### ⌨️ Keyboard-Friendly
+### Keyboard Support
 
-Designed with keyboard shortcuts for faster navigation and editing.
+EzNote includes keyboard shortcuts for common actions, making navigation and editing faster without relying entirely on the mouse.
 
 ---
 
-## ⌨️ Keyboard Shortcuts
+## Keyboard Shortcuts
 
 | Shortcut               | Action                                                |
 | ---------------------- | ----------------------------------------------------- |
@@ -68,92 +88,92 @@ Designed with keyboard shortcuts for faster navigation and editing.
 | `Ctrl + F` / `Cmd + F` | Focus the search field                                |
 | `Ctrl + B` / `Cmd + B` | Toggle **Bold**                                       |
 | `Ctrl + I` / `Cmd + I` | Toggle *Italic*                                       |
-| `Escape`               | Clear search / cancel selection                       |
+| `Escape`               | Clear search or cancel selection                      |
 | `Delete` / `Backspace` | Delete the active note when the editor is not focused |
 
-> **Note:** macOS uses `Cmd`, while Windows and Linux use `Ctrl`.
+> On Windows and Linux, use `Ctrl`. On macOS, use `Cmd`.
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
-### Prerequisites
+### Requirements
 
-Make sure you have **Node.js** installed on your computer.
+Before running EzNote from source, make sure you have:
 
-[Download Node.js](https://nodejs.org/?utm_source=chatgpt.com)
+* [Node.js](https://nodejs.org/) installed
+* Git installed
 
-### 1. Clone the Repository
+### Clone the Repository
 
 ```bash
-git clone https://github.com/username/EzNote.git
+git clone https://github.com/brechq/EzNote.git
 cd EzNote
 ```
 
-### 2. Install Dependencies
+### Install Dependencies
 
 ```bash
 npm install
 ```
 
-### 3. Start EzNote
+### Run in Development
 
 ```bash
 npm start
 ```
 
-EzNote should now launch in development mode.
+EzNote will launch as a desktop application.
 
 ---
 
-## 📦 Build for Windows
+## Build for Windows
 
-To package EzNote into a standalone Windows application:
+EzNote uses Electron Builder for application packaging.
+
+To create a Windows build:
 
 ```bash
 npm run dist
 ```
 
-The generated files will be placed inside the `dist/` directory.
-
-Typical output:
+Build files will be generated inside:
 
 ```text
 dist/
-├── EzNote Setup 1.0.0.exe
-└── EzNote 1.0.0.exe
 ```
 
-The installer can be used to install EzNote normally, while the portable version can be launched without a traditional installation.
+Depending on the configured Electron Builder targets, the output may include an installer and/or portable executable.
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Technology             | Purpose                            |
 | ---------------------- | ---------------------------------- |
 | **Electron**           | Desktop application runtime        |
 | **HTML5**              | Application structure              |
-| **Modern CSS**         | UI, layout, themes, and styling    |
+| **Modern CSS**         | Layout, styling, and themes        |
 | **Vanilla JavaScript** | Application logic and interactions |
 | **localStorage**       | Local note persistence             |
 | **Electron Builder**   | Application packaging              |
 
 ### Why Vanilla JavaScript?
 
-EzNote intentionally avoids heavy frontend frameworks and unnecessary dependencies.
+EzNote intentionally avoids large frontend frameworks and unnecessary dependencies.
 
-The goal is to keep the application:
+The project is built with standard web technologies to keep the codebase straightforward and easy to understand.
 
-* Lightweight
-* Fast
-* Easy to understand
-* Easy to modify
+This makes EzNote:
+
+* Simple to modify
 * Easy to maintain
+* Easy to learn from
+* Free from unnecessary frontend dependencies
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 EzNote/
@@ -162,33 +182,76 @@ EzNote/
 ├── script.js
 ├── main.js
 ├── package.json
+├── readmebanner.jpg
 └── assets/
     └── ...
 ```
 
-> The exact structure may change as the project evolves.
+The structure may evolve as EzNote continues to develop.
 
 ---
 
-## 🔐 Privacy
+## Privacy
 
-EzNote is designed around local-first note storage.
+EzNote follows a local-first approach.
 
-Your notes are stored locally on your device rather than being uploaded to a remote server.
+* Notes are stored locally on your device
+* No account is required
+* No cloud database is required
+* Notes are not intentionally uploaded to a remote server
 
-There is no required account or cloud database.
+Your notes stay on your device unless you choose to move or export them yourself.
 
 ---
-## 📄 License
+
+## Roadmap
+
+EzNote is currently at **v1.0.0**.
+
+Potential future improvements include:
+
+* [ ] Better note organization
+* [ ] Folders
+* [ ] Tags
+* [ ] Improved search
+* [ ] Markdown support
+* [ ] Import and export
+* [ ] Note backup and restore
+* [ ] Improved customization
+* [ ] Additional keyboard shortcuts
+
+The roadmap may change as the project evolves.
+
+---
+
+## Contributing
+
+Contributions, suggestions, and improvements are welcome.
+
+If you find a bug or have an idea for EzNote, open an issue or submit a pull request on GitHub.
+
+Before submitting a large change, consider opening an issue first so the proposed direction can be discussed.
+
+---
+
+## License
 
 EzNote is released under the **MIT License**.
 
-See the [`LICENSE`](LICENSE) file for more information.
+See the [`LICENSE`](LICENSE) file for the full license text.
 
 ---
 
-## ⭐ Support
+## Support
 
-If you find EzNote useful, consider giving the repository a ⭐ on GitHub.
+If you find EzNote useful, consider giving the repository a star on GitHub.
 
-Every star helps the project grow.
+It helps the project gain visibility and motivates further development.
+
+<div align="center">
+
+**EzNote — Simple notes, without the unnecessary complexity.**
+
+[GitHub Repository](https://github.com/brechq/EzNote)
+
+</div>
