@@ -39,7 +39,7 @@ EzNote stores your notes locally on your device, making it suitable for users wh
 ## Application Interface
 
 <p align="center">
-  <img src="ReadMe%20Asset/application-interface.jpg" alt="EzNote Application Interface" width="900">
+  <img src="ReadMe%20Asset/application-interface.png" alt="EzNote Application Interface" width="900">
 </p>
 
 EzNote is built around a simple three-panel workflow:
